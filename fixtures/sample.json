@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "data_version": "sample-1",
+    "as_of": 10,
+    "p_min": 0.1,
+    "bounds": [
+      0,
+      10
+    ],
+    "streams": {
+      "all_sales": 0.05
+    }
+  },
+  "collections": {
+    "assignments": [
+      {
+        "id": "a",
+        "revision": 1,
+        "order": 1,
+        "treated": true,
+        "probability": 0.5,
+        "registered": 0
+      },
+      {
+        "id": "b",
+        "revision": 1,
+        "order": 2,
+        "treated": false,
+        "probability": 0.5,
+        "registered": 0
+      }
+    ],
+    "outcomes": [
+      {
+        "id": "oa",
+        "revision": 1,
+        "enterprise": "a",
+        "value": 4,
+        "known": 5
+      },
+      {
+        "id": "ob",
+        "revision": 1,
+        "enterprise": "b",
+        "value": 3,
+        "known": 20
+      }
+    ]
+  }
+}
