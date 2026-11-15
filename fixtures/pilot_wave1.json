@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "data_version": "wave1",
+    "as_of": 10,
+    "p_min": 0.2,
+    "bounds": [0, 10],
+    "streams": {"all_sales": 0.05}
+  },
+  "collections": {
+    "assignments": [
+      {"id": "E-01", "revision": 1, "order": 1, "treated": true, "probability": 0.5, "registered": 0, "attributes": {"size": "mid"}},
+      {"id": "E-02", "revision": 1, "order": 2, "treated": false, "probability": 0.5, "registered": 0, "attributes": {"size": "mid"}},
+      {"id": "E-03", "revision": 1, "order": 3, "treated": true, "probability": 0.3, "registered": 0, "attributes": {"size": "big"}},
+      {"id": "E-04", "revision": 1, "order": 4, "treated": false, "probability": 0.7, "registered": 0, "attributes": {"size": "mid"}},
+      {"id": "E-05", "revision": 1, "order": 5, "treated": true, "probability": 0.5, "registered": 0, "attributes": {"size": "big"}},
+      {"id": "E-06", "revision": 1, "order": 6, "treated": false, "probability": 0.5, "registered": 4, "attributes": {"size": "mid"}}
+    ],
+    "outcomes": [
+      {"id": "o1", "revision": 1, "enterprise": "E-01", "value": 8, "known": 5},
+      {"id": "o2", "revision": 1, "enterprise": "E-02", "value": 3, "known": 6},
+      {"id": "o3", "revision": 1, "enterprise": "E-03", "value": 12, "known": 7},
+      {"id": "o5", "revision": 1, "enterprise": "E-05", "value": 9, "known": 9}
+    ]
+  }
+}

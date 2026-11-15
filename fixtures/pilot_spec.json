@@ -1,0 +1,17 @@
+{
+  "spec_id": "pilot-2026",
+  "alpha_total": 0.05,
+  "p_min": 0.2,
+  "frozen_at": 0,
+  "metrics": {
+    "all_sales": {"bounds": [0, 10], "delta": 0.5}
+  },
+  "groups": {
+    "all": {},
+    "mid": {"attributes": {"size": "mid"}}
+  },
+  "cells": [
+    {"metric": "all_sales", "group": "all", "weight": 0.7},
+    {"metric": "all_sales", "group": "mid", "weight": 0.3}
+  ]
+}

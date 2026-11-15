@@ -17,3 +17,9 @@ assignments含order、treated、probability、registered；outcomes含enterprise
 ## 当前能力
 
 app.baseline.analyze(snapshot)产生已有摘要，app.service.inspect负责绑定输入身份；新增分析可以增设独立入口，已有接口及上述数据语义保持兼容。
+
+## 随时有效推断扩展
+
+assignments记录可带可选attributes对象（字符串键到字符串/数值），供预登记分组匹配；outcomes记录可带可选metric字段，单指标方案下缺省归入该指标，多指标方案下缺省不纳入任何单元。两字段缺省时语义与既有资料完全一致。
+
+app.anytime提供随时有效推断账本：init冻结预登记方案（指标截顶范围、分组、单元权重预算、总量alpha），run消费资料快照产生版本化报告（区间、检验证据、有效前缀、阻塞原因），replay重算并校验任意版本，amend只用剩余预算追加前向生效的修订，acknowledge确认与更正资料冲突的历史决定。构造、假设与审计规则见docs/anytime-valid.md。

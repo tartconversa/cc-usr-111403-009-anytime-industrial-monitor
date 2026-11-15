@@ -10,6 +10,14 @@ app/catalog.py 按集合和记录键解析修订，拒绝同修订冲突；app/b
 
     python -m app.service fixtures/sample.json
 
+随时有效推断（预登记方案 + 审计账本，构造与假设见 [随时有效推断](docs/anytime-valid.md)）：
+
+    python -m app.anytime init /tmp/ledger fixtures/pilot_spec.json   # 冻结方案
+    python -m app.anytime run /tmp/ledger fixtures/pilot_wave1.json  # 每周查看
+    python -m app.anytime run /tmp/ledger fixtures/pilot_wave2.json
+    python -m app.anytime replay /tmp/ledger --all                    # 回放校验
+    python -m app.anytime decisions /tmp/ledger                       # 停止决定
+
 运行当前模块检查：
 
     python -m unittest discover -s tests -v
